@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t my-app:v1 .'
+        sh 'docker build -t my-app:v1 -f my-app/Dockerfile my-app'
       }
     }
     stage('Push') {
